@@ -63,7 +63,7 @@
 
 
 
-<div class="container-header my-auto" id="co">
+<div class="container-header my-auto slides__slide" id="co">
   <canvas id="c"></canvas>
 
   <h1>Digital Solutions</h1>
@@ -71,7 +71,7 @@
 
 
 
-    <section class="bg-primary" id="about">
+    <section class="bg-primary slides__slide" id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
@@ -83,7 +83,7 @@
         </div>
       </div>
     </section>
-        <section id="about2">
+        <section class="bg-slight slides__slide" id="about2">
       <div class="container">
         <div class="row align-items-center">
           
@@ -99,7 +99,7 @@
       </div>
     </section>
 
-    <section class="bg-slight" id="about3">
+    <section class="bg-slight slides__slide" id="about3">
       <div class="container">
         <div class="row align-items-center">
           
@@ -116,9 +116,11 @@
       </div>
     </section>
 
-    <section id="services">
+    <section class="bg-slight slides__slide" id="services">
+      <br><br><br><br>
+
       <div class="container">
-        <div class="row">
+        <div class="row ">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">Servicios</h2>
             <hr class="my-4">
@@ -152,13 +154,15 @@
         
         
       </div>
+      <br><br><br><br>
+
     </section>
 
 
 
 
 
-    <section class="bg-footer" id="contact">
+    <section class="bg-footer slides__slide" id="contact">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
@@ -201,6 +205,30 @@
     <script src="js/creative.js"></script>
     <script src="js/index.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js'></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.17/jquery.scrollify.min.js"></script>
+  <script id="rendered-js">
+    var options = {
+        slideSelector: ".slides__slide",
+        defaultBGColor: 'rgba(143,100,142,1)'
+    };
+    //uses GSAP to animate bg colour
+    jQuery(function() {
+        jQuery.scrollify({
+            section : options.slideSelector,
+            before:function(slideIndex, slides) {           
+            
+                var c = jQuery('.slides__slide:eq('+(slideIndex -1)+')');
+                var n = jQuery('.slides__slide:eq('+slideIndex+')');
+                
+                TweenMax.to(jQuery('.slides__slide'), 5, {backgroundColor: n.attr('data-bg-color')});
+                
+            }
+        });
+    });
+        </script>
   </body>
 
 </html>

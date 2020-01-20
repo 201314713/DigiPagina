@@ -46,11 +46,9 @@ h6 {
 
 .bg-primary {
   background-color: #82b74b !important;
-  height: 600px;
 }
 .bg-slight {
   background-color: #e1eaea !important;
-  height: 800px;
 }
 .slides__slide{
   background-color: rgba(100,100,100,1);
