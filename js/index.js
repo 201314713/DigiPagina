@@ -23,7 +23,7 @@
 
         // create particles
         circles = [];
-        for(var x = 0; x < width*0.5; x++) {
+        for(var x = 0; x < width*0.10; x++) {
             var c = new Circle();
             circles.push(c);
         }
@@ -84,10 +84,14 @@
             }
             _this.pos.y -= _this.velocity;
             _this.alpha -= 0.0005;
-            ctx.beginPath();
+           /* ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.scale*10, 0, 2 * Math.PI, false);
             ctx.fillStyle = 'rgba(255,255,255,'+ _this.alpha+')';
-            ctx.fill();
+            ctx.fill();        */        
+            ctx.font = "16px Consolas";
+            ctx.fillStyle = "white";
+            ctx.fillText("0", _this.pos.x+45, _this.pos.y+45);
+            ctx.fillText("1", _this.pos.x, _this.pos.y);            
         };
     }
 
