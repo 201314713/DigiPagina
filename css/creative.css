@@ -181,7 +181,7 @@ img::-moz-selection {
   }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
-    color: #212529;  <!-- when not active color -->
+    color: #212529;
   }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
@@ -351,7 +351,7 @@ strong {
 
 
 
-@import url(https://fonts.googleapis.com/css?family=Calligraffitti);
+/*@import url(https://fonts.googleapis.com/css?family=Calligraffitti);*/
 
 .container-header {
   background-image: linear-gradient(135deg, rgba(52, 152, 219,0.5) 0%,rgba(65, 65, 65, 0.6) 100%), url("../img/header3.jpg");
@@ -368,9 +368,9 @@ h1 {
   padding: 0;
   color: #fff;
   text-align: center;
-  top: 50%;
-  left: 50%;
-  font-family: "Calligraffitti";
+  top: 40%;
+  left: 50%;  
+  font-family: 'Audiowide';
   font-weight: normal;
   font-size: 5em;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
